@@ -62,7 +62,7 @@ const AboutUs = () => {
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold mb-6 text-solar-blue dark:text-white">About Our Store</h1>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Founded in 2025, Ygrenevlos has been at the forefront of the renewable energy revolution 
+                  Founded in 2025, Solvenergy has been at the forefront of the renewable energy revolution 
                   in our community. We're not just a retailer - we're passionate advocates for sustainable 
                   living and energy independence.
                 </p>
@@ -195,7 +195,7 @@ const AboutUs = () => {
                     <div className="space-y-4">
                       <div>
                         <p className="font-semibold text-gray-700 dark:text-gray-300">Email:</p>
-                        <p className="text-gray-600 dark:text-gray-400">contact@solvenergy.in</p>
+                        <p className="text-gray-600 dark:text-gray-400"><a className="hover:text-solar-blue dark:hover:text-solar-gold" href="mailto:contact@solvenergy.in">contact@solvenergy.in</a></p>
                       </div>
                       {/* <div className="pt-4">
                         <Button className="bg-solar-gold hover:bg-opacity-90 text-solar-blue w-full">

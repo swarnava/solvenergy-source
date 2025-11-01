@@ -175,7 +175,7 @@ const LoadCalculatorSection = () => {
                       />
                     </div>
                   </div>
-                  <Button onClick={addAppliance} className="w-full bg-solar-blue hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700">
+                  <Button onClick={addAppliance} className="w-full bg-solar-blue hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 dark:text-white">
                     <Plus className="h-4 w-4 mr-1" />
                     Add Appliance
                   </Button>
@@ -300,9 +300,9 @@ const LoadCalculatorSection = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-solar-green hover:bg-green-600 text-white">
+                {/* <Button className="w-full bg-solar-green hover:bg-green-600 text-white">
                   Get Started
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           </div>
