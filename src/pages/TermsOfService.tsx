@@ -16,7 +16,7 @@ const TermsOfService = () => {
         <div className="container mx-auto px-4 py-8 max-w-4xl">
           <Link 
             to="/" 
-            className="inline-flex items-center text-solar-blue hover:text-solar-green mb-6 transition-colors"
+            className="inline-flex items-center text-solar-blue dark:text-white dark:hover:text-solar-gold mb-6 transition-colors"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
@@ -91,14 +91,15 @@ const TermsOfService = () => {
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-2">
                 <p className="text-gray-600 dark:text-gray-300">
-                  Email: contact@solvenergy.in
+                  Email: <a className="hover:text-solar-blue dark:hover:text-solar-gold" href="mailto:contact@solvenergy.in">contact@solvenergy.in</a>
                 </p>
               </div>
             </section>
 
             <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-8">
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Last updated: {new Date().toLocaleDateString()}
+                {/* Last updated: {new Date().toLocaleDateString()} */}
+                Last updated: Nov 1, 2025
               </p>
             </div>
           </div>
