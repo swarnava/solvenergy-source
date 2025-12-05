@@ -1,6 +1,5 @@
 
 import React, { useEffect } from "react";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navbar from "@/components/Navbar";
@@ -36,19 +35,7 @@ const SolarPanels = () => {
       <Navbar />
       <main className="pt-24 pb-16 transition-colors duration-500">
         <div className="container mx-auto px-4">
-          <Breadcrumb className="mb-8">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Solar Panels</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
-          <section className="mb-16">
+          <section className="my-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="fade-in">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-solar-blue dark:text-blue-300">Solar Panels</h1>

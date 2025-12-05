@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Calculator, Plus, Trash2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Appliance {
   id: string;
@@ -88,12 +89,12 @@ const LoadCalculatorSection = () => {
     <section id="calculator" className="solar-section bg-solar-light dark:bg-gray-900 py-24 transition-colors duration-300">
       <div className="solar-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center mb-10">
+          <div className="flex items-center justify-center my-12">
             <Calculator className="h-8 w-8 text-solar-blue dark:text-blue-300 mr-3" />
-            <h2 className="section-title mb-0">Solar Load Calculator</h2>
+            <h2 className="section-title mb-0">Estimate: Solar Solution Requirements</h2>
           </div>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
-            Calculate your power requirements to determine the right solar system size for your home.
+            Calculate your power demands to determine the right solar system size.
             Add your appliances and get instant recommendations.
           </p>
         </div>
@@ -305,6 +306,12 @@ const LoadCalculatorSection = () => {
                 </Button> */}
               </CardContent>
             </Card>
+
+            <Link to="/contact" className="block">
+              <Button className="w-full bg-solar-gold hover:bg-opacity-90 text-solar-blue font-semibold text-xl py-8 transition-transform hover:scale-105 duration-300">
+                Contact us for quotations!
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

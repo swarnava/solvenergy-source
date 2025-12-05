@@ -62,7 +62,7 @@ const HeroSection = () => {
                 onClick={scrollToNextSection}
                 className={`${theme === 'dark' ? 'bg-blue-500 hover:bg-blue-600 text-white' : 'bg-solar-gold hover:bg-opacity-90 text-solar-blue hover:bg-white'} font-medium text-lg px-6 py-6 transition-transform hover:scale-105 duration-300`}
               >
-                Get Started
+                Estimate
               </Button>
               <Button 
                 onClick={navigateToSolarPanels}

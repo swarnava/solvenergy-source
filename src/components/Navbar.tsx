@@ -40,16 +40,6 @@ const Navbar = () => {
     }
   };
 
-  const handlePowerCalculatorClick = () => {
-    navigate('/');
-    setTimeout(() => {
-      const calculatorSection = document.getElementById('calculator');
-      if (calculatorSection) {
-        calculatorSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  };
-
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -80,6 +70,13 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
+          <Link
+            to="/#calculator"
+            onClick={() => scrollToSection("calculator")}
+            className={`${isScrolled ? "bg-solar-blue" : "bg-gray-800"} ${theme === 'dark' ? "" : "hover:text-solar-blue"} rounded-md px-3 py-2 font-semibold hover:bg-accent text-md text-white dark:bg-blue-700 dark:hover:bg-blue-800 transition-colors`}
+          >
+            Estimate
+          </Link>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -126,22 +123,6 @@ const Navbar = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          {/* <button 
-            onClick={handlePowerCalculatorClick}
-            className={`${isScrolled ? "text-gray-800" : theme === 'dark' ? "text-white" : "text-gray-800"} dark:text-gray-200 transition-colors font-medium`}
-          >
-            Power Calculator
-          </button> */}
-          <Link to="/about-us" className={`${isScrolled ? "text-gray-800" : theme === 'dark' ? "text-white" : "text-gray-800"} dark:text-gray-200 transition-colors font-medium rounded-md px-3 py-2 hover:bg-accent/50`}>
-            About Us
-          </Link>
-          <Link 
-            to="/#calculator"
-            onClick={() => scrollToSection("calculator")}
-            className={`${isScrolled ? "bg-solar-blue" : "bg-gray-800"} ${theme === 'dark' ? "" : "hover:text-solar-blue"} rounded-md px-3 py-2 font-semibold hover:bg-accent text-md text-white dark:bg-blue-700 dark:hover:bg-blue-800 transition-colors`}
-          >
-            Power Calculator
-          </Link>
           <Button variant="ghost" size="icon" onClick={toggleTheme} className="ml-2 transition-transform hover:rotate-12 duration-300">
             {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
@@ -171,6 +152,15 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 transition-all duration-300 transform animate-accordion-down">
           <div className="container mx-auto px-4 flex flex-col space-y-4">
+            <Link
+              to="/#calculator"
+              onClick={() => {
+                setMobileMenuOpen(false);
+              }}
+              className="text-solar-blue dark:text-white font-medium py-2 transition-colors text-left"
+            >
+              Estimate
+            </Link>
             <div className="text-solar-blue dark:text-white font-medium py-2 transition-colors">
               Products
             </div>
@@ -197,30 +187,12 @@ const Navbar = () => {
                 Battery Storage
               </Link>
             </div>
-            <button
-              onClick={() => {
-                handlePowerCalculatorClick();
-                setMobileMenuOpen(false);
-              }}
-              className="text-solar-blue dark:text-white font-medium py-2 transition-colors text-left"
-            >
-              Power Calculator
-            </button>
             <Link
-              to="/about-us"
+              to="/contact"
               className="text-solar-blue dark:text-white font-medium py-2 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About Us
-            </Link>
-            <Link
-              to="/#calculator" 
-              onClick={() => {
-                setMobileMenuOpen(false);
-              }}
-              className="bg-solar-blue hover:bg-opacity-90 text-white dark:bg-blue-700 dark:hover:bg-blue-800 transition-colors w-full"
-            >
-              Power Calculator
+              Contact Us
             </Link>
           </div>
         </div>
